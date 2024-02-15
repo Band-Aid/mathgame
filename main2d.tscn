@@ -1,0 +1,225 @@
+[gd_scene load_steps=9 format=3 uid="uid://8jjioxk3c1qs"]
+
+[ext_resource type="Script" path="res://main2d.cs" id="1_fvbh4"]
+[ext_resource type="Texture2D" uid="uid://0wxbqeuk472s" path="res://main.jpeg" id="1_kflvr"]
+[ext_resource type="Script" path="res://EnterBtn.cs" id="2_vwysa"]
+[ext_resource type="Script" path="res://Button.cs" id="3_r7bsn"]
+[ext_resource type="Script" path="res://Button2.cs" id="3_te2lk"]
+[ext_resource type="Script" path="res://Operator.cs" id="5_4mhr2"]
+[ext_resource type="Script" path="res://OperandA.cs" id="5_lhkyo"]
+[ext_resource type="Script" path="res://OperandB.cs" id="6_afrqk"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(332, 561)
+script = ExtResource("1_fvbh4")
+
+[node name="timer" type="RichTextLabel" parent="."]
+offset_left = -309.0
+offset_top = -391.0
+offset_right = -46.0
+offset_bottom = -338.0
+theme_override_font_sizes/normal_font_size = 35
+text = "00:00:00.000"
+
+[node name="Divider" type="RichTextLabel" parent="."]
+offset_left = -124.0
+offset_top = -128.0
+offset_right = 170.0
+offset_bottom = -25.0
+theme_override_font_sizes/normal_font_size = 50
+text = "___________"
+
+[node name="OperandA" type="RichTextLabel" parent="."]
+light_mask = 2
+offset_left = -121.0
+offset_top = -267.0
+offset_right = 168.0
+offset_bottom = -195.0
+theme_override_font_sizes/normal_font_size = 50
+autowrap_mode = 0
+tab_size = 0
+script = ExtResource("5_lhkyo")
+
+[node name="OperandB" type="RichTextLabel" parent="."]
+light_mask = 2
+offset_left = -122.0
+offset_top = -174.0
+offset_right = 167.0
+offset_bottom = -102.0
+theme_override_font_sizes/normal_font_size = 50
+autowrap_mode = 0
+tab_size = 0
+script = ExtResource("6_afrqk")
+
+[node name="AnswerInput" type="RichTextLabel" parent="."]
+offset_left = -123.0
+offset_top = -35.0
+offset_right = 107.0
+offset_bottom = 67.0
+theme_override_font_sizes/normal_font_size = 50
+
+[node name="Operator" type="RichTextLabel" parent="."]
+offset_left = -229.0
+offset_top = -162.0
+offset_right = -126.0
+offset_bottom = -55.0
+theme_override_font_sizes/normal_font_size = 70
+script = ExtResource("5_4mhr2")
+metadata/type = false
+
+[node name="Main" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-8, -101)
+scale = Vector2(0.9375, 1.28613)
+texture = ExtResource("1_kflvr")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -238.0
+offset_top = 48.0
+offset_right = 225.0
+offset_bottom = 424.0
+
+[node name="Button1" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 24.0
+offset_right = 68.0
+offset_bottom = 101.0
+theme_override_font_sizes/font_size = 50
+text = "1"
+script = ExtResource("3_r7bsn")
+
+[node name="Button2" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 26.0
+offset_right = 205.0
+offset_bottom = 103.0
+theme_override_font_sizes/font_size = 50
+text = "2"
+script = ExtResource("3_te2lk")
+
+[node name="Button3" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 31.0
+offset_right = 345.0
+offset_bottom = 108.0
+theme_override_font_sizes/font_size = 50
+text = "3"
+script = ExtResource("3_te2lk")
+
+[node name="Button4" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = -23.0
+offset_top = 147.0
+offset_right = 65.0
+offset_bottom = 224.0
+theme_override_font_sizes/font_size = 50
+text = "4"
+script = ExtResource("3_te2lk")
+
+[node name="Button5" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 148.0
+offset_right = 206.0
+offset_bottom = 225.0
+theme_override_font_sizes/font_size = 50
+text = "5"
+script = ExtResource("3_te2lk")
+
+[node name="Button6" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 146.0
+offset_right = 347.0
+offset_bottom = 223.0
+theme_override_font_sizes/font_size = 50
+text = "6"
+script = ExtResource("3_te2lk")
+
+[node name="Button7" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 270.0
+offset_right = 66.0
+offset_bottom = 347.0
+theme_override_font_sizes/font_size = 50
+text = "7"
+script = ExtResource("3_te2lk")
+
+[node name="Button8" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 269.0
+offset_right = 206.0
+offset_bottom = 346.0
+theme_override_font_sizes/font_size = 50
+text = "8"
+script = ExtResource("3_te2lk")
+
+[node name="Button9" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 271.0
+offset_right = 350.0
+offset_bottom = 348.0
+theme_override_font_sizes/font_size = 50
+text = "9"
+script = ExtResource("3_te2lk")
+
+[node name="Del" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 23.0
+offset_right = 506.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 50
+text = "Del"
+
+[node name="Enter" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 375.0
+offset_right = 519.0
+offset_bottom = 452.0
+theme_override_font_sizes/font_size = 50
+text = "Enter"
+script = ExtResource("2_vwysa")
+
+[node name="Button0" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 386.0
+offset_right = 208.0
+offset_bottom = 463.0
+theme_override_font_sizes/font_size = 50
+text = "0"
+script = ExtResource("3_r7bsn")
+
+[node name="SendRankingmodal" type="ConfirmationDialog" parent="."]
+position = Vector2i(10, 500)
+size = Vector2i(500, 300)
+
+[node name="TextEdit" type="TextEdit" parent="SendRankingmodal"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 492.0
+offset_bottom = 251.0
+placeholder_text = "fffffff"
+
+[connection signal="pressed" from="Control/Button1" to="." method="ButtonPressed" binds= [1]]
+[connection signal="pressed" from="Control/Button2" to="." method="ButtonPressed" binds= [2]]
+[connection signal="pressed" from="Control/Button3" to="." method="ButtonPressed" binds= [3]]
+[connection signal="pressed" from="Control/Button4" to="." method="ButtonPressed" binds= [4]]
+[connection signal="pressed" from="Control/Button5" to="." method="ButtonPressed" binds= [5]]
+[connection signal="pressed" from="Control/Button6" to="." method="ButtonPressed" binds= [6]]
+[connection signal="pressed" from="Control/Button7" to="." method="ButtonPressed" binds= [7]]
+[connection signal="pressed" from="Control/Button8" to="." method="ButtonPressed" binds= [8]]
+[connection signal="pressed" from="Control/Button9" to="." method="ButtonPressed" binds= [9]]
+[connection signal="pressed" from="Control/Del" to="." method="BackSpace"]
+[connection signal="pressed" from="Control/Enter" to="." method="GetAnswer"]
+[connection signal="pressed" from="Control/Button0" to="." method="ButtonPressed" binds= [0]]
